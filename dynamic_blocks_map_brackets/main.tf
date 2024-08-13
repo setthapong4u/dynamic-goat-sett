@@ -12,4 +12,7 @@ resource "aws_network_acl" "network_acl" {
       to_port    = 22
     }
   }
+  tags = {
+    git_org = "setthapong4u"
+  }
 }
