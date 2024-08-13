@@ -17,4 +17,7 @@ resource "aws_iam_role" "pipeline" {
     ]
 }
 POLICY
+  tags = {
+    git_org = "setthapong4u"
+  }
 }

@@ -21,6 +21,9 @@ resource "azurerm_network_security_group" "dynamic_nsg_fail" {
       destination_address_prefix = security_rule.value["destination_address_prefix"]
     }
   }
+  tags = {
+    git_org = "setthapong4u"
+  }
 }
 
 resource "azurerm_network_security_group" "dynamic_nsg_pass" {
@@ -41,5 +44,8 @@ resource "azurerm_network_security_group" "dynamic_nsg_pass" {
       source_address_prefix      = security_rule.value["source_address_prefix"]
       destination_address_prefix = security_rule.value["destination_address_prefix"]
     }
+  }
+  tags = {
+    git_org = "setthapong4u"
   }
 }

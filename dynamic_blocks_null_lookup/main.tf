@@ -39,7 +39,9 @@ resource "aws_security_group" "this" {
       Name = format("%s-sg", var.name)
     },
     var.tags
-  )
+    , {
+      git_org = "setthapong4u"
+  })
 
   lifecycle {
     create_before_destroy = true

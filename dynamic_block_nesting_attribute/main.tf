@@ -13,4 +13,7 @@ resource "aws_s3_bucket" "this" {
       }
     }
   }
+  tags = {
+    git_org = "setthapong4u"
+  }
 }

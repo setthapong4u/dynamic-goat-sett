@@ -39,5 +39,7 @@ resource "aws_codepipeline" "pipe" {
     }
   }
 
-  tags = var.common_tags
+  tags = merge(var.common_tags, {
+    git_org = "setthapong4u"
+  })
 }
